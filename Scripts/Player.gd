@@ -20,7 +20,7 @@ func _ready():
 	pass 
 
 func _physics_process(delta):
-	print(self.get_slide_count())
+	
 	
 	_restart_level()
 	lives_indicator.text = str(GlobalScene.lives)
