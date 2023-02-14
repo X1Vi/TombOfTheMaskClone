@@ -1,13 +1,14 @@
 extends KinematicBody2D
 
-
+onready var playerSprite : Sprite = $Sprite
 signal transfer_dir(dir)
+onready var rootNode : Node2D =  $Node2D
 var arr = []
 var direction = Vector2.ZERO
 onready var timer = $Timer
 var MAX_SPEED = 1000
 onready var animation_player = $AnimationPlayer
-onready var lives_indicator = $Camera2D/RichTextLabel
+onready var lives_indicator = $RichTextLabel
 
 var start_point
 var end_position
@@ -17,14 +18,15 @@ func _is_player():
 	pass
 
 func _ready():
-	pass 
+	pass
 
 func _physics_process(delta):
 	
-	
+	handle_animations()
 	_restart_level()
 	lives_indicator.text = str(GlobalScene.lives)
 	move_and_slide(MAX_SPEED * direction)
+	
 	
 	
 	
@@ -76,5 +78,26 @@ func _restart_level():
 		GlobalScene.lives = 3
 		get_tree().reload_current_scene()
 		
+func handle_animations():
+	if direction.x < 0:
+		playerSprite.flip_h = true
+	if direction.x > 0:
+		playerSprite.flip_h = false
 		
 		
+	
+		
+		
+		
+
+
+func _on_Level_Select_pressed():
+	get_tree().change_scene("res://Scenes/LevelSelectTesting.tscn")
+
+
+func _on_Pause_pressed():
+	var t_pause_state = not get_tree().paused
+	get_tree().paused = t_pause_state
+
+
+

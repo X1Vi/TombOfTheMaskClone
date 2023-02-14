@@ -1,6 +1,10 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/LevelSelectTesting.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Button.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_right = 640.0
@@ -13,173 +17,55 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 5
 
-[node name="Button" type="Button" parent="ScrollContainer/GridContainer"]
-margin_right = 125.0
-margin_bottom = 77.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level1"
-
-[node name="Button2" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 129.0
-margin_right = 254.0
-margin_bottom = 77.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level2"
-
-[node name="Button3" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 258.0
-margin_right = 383.0
-margin_bottom = 77.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level3"
-
-[node name="Button4" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 387.0
-margin_right = 512.0
-margin_bottom = 77.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level4"
-
-[node name="Button5" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 516.0
-margin_right = 640.0
-margin_bottom = 77.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level5"
-
-[node name="Button6" type="Button" parent="ScrollContainer/GridContainer"]
-margin_top = 81.0
+[node name="Button" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_right = 125.0
 margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level6"
 
-[node name="Button7" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button2" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 129.0
-margin_top = 81.0
 margin_right = 254.0
 margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level7"
 
-[node name="Button8" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button3" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 258.0
-margin_top = 81.0
 margin_right = 383.0
 margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level8"
 
-[node name="Button9" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button4" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 387.0
-margin_top = 81.0
 margin_right = 512.0
 margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level9"
 
-[node name="Button10" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button5" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 516.0
-margin_top = 81.0
 margin_right = 640.0
 margin_bottom = 158.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level10"
 
-[node name="Button11" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button6" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_top = 162.0
 margin_right = 125.0
-margin_bottom = 239.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level11"
+margin_bottom = 320.0
 
-[node name="Button12" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button7" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 129.0
 margin_top = 162.0
 margin_right = 254.0
-margin_bottom = 239.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level12"
+margin_bottom = 320.0
 
-[node name="Button13" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button8" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 258.0
 margin_top = 162.0
 margin_right = 383.0
-margin_bottom = 239.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level13"
+margin_bottom = 320.0
 
-[node name="Button14" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button9" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 387.0
 margin_top = 162.0
 margin_right = 512.0
-margin_bottom = 239.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level14"
+margin_bottom = 320.0
 
-[node name="Button15" type="Button" parent="ScrollContainer/GridContainer"]
+[node name="Button10" parent="ScrollContainer/GridContainer" instance=ExtResource( 2 )]
 margin_left = 516.0
 margin_top = 162.0
 margin_right = 640.0
-margin_bottom = 239.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level15"
-
-[node name="Button16" type="Button" parent="ScrollContainer/GridContainer"]
-margin_top = 243.0
-margin_right = 125.0
 margin_bottom = 320.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level16"
-
-[node name="Button17" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 129.0
-margin_top = 243.0
-margin_right = 254.0
-margin_bottom = 320.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level17"
-
-[node name="Button18" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 258.0
-margin_top = 243.0
-margin_right = 383.0
-margin_bottom = 320.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level18"
-
-[node name="Button19" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 387.0
-margin_top = 243.0
-margin_right = 512.0
-margin_bottom = 320.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level19"
-
-[node name="Button20" type="Button" parent="ScrollContainer/GridContainer"]
-margin_left = 516.0
-margin_top = 243.0
-margin_right = 640.0
-margin_bottom = 320.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Level20"

@@ -55,17 +55,35 @@ wait_time = 0.001
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -3, 1 )
 current = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
-margin_left = 186.0
-margin_top = -128.0
-margin_right = 226.0
-margin_bottom = -88.0
-text = "Lives"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/Walk = SubResource( 3 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 262.0
+margin_top = -118.0
+margin_right = 302.0
+margin_bottom = -78.0
+text = "Lives"
+
+[node name="Level Select" type="Button" parent="."]
+margin_left = 284.0
+margin_top = -172.0
+margin_right = 296.0
+margin_bottom = -152.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Pause" type="Button" parent="."]
+pause_mode = 2
+margin_left = 243.0
+margin_top = -172.0
+margin_right = 255.0
+margin_bottom = -152.0
+rect_scale = Vector2( 2, 2 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Level Select" to="." method="_on_Level_Select_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
