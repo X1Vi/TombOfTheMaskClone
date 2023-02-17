@@ -24,7 +24,7 @@ func _physics_process(delta):
 	
 	handle_animations()
 	_restart_level()
-	lives_indicator.text = str(GlobalScene.lives)
+	lives_indicator.text = str("Lives :" + str(GlobalScene.lives))
 	move_and_slide(MAX_SPEED * direction)
 	
 	

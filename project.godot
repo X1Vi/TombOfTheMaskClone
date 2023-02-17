@@ -46,6 +46,9 @@ pointing/emulate_touch_from_mouse=true
 2d_physics/layer_4="Spikes"
 2d_physics/layer_5="Spikes Area 2d"
 2d_physics/layer_6="Bats"
+2d_physics/layer_7="Portals"
+2d_physics/layer_8="Guns"
+2d_physics/layer_9="Bullet"
 
 [physics]
 
@@ -53,7 +56,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"

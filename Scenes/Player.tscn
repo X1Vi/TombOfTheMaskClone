@@ -39,7 +39,7 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
-collision_layer = 4
+collision_layer = 196
 collision_mask = 2
 script = ExtResource( 2 )
 
@@ -63,26 +63,29 @@ anims/RESET = SubResource( 2 )
 anims/Walk = SubResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 262.0
-margin_top = -118.0
-margin_right = 302.0
-margin_bottom = -78.0
+margin_left = -312.0
+margin_top = -170.0
+margin_right = -247.0
+margin_bottom = -130.0
 text = "Lives"
 
 [node name="Level Select" type="Button" parent="."]
-margin_left = 284.0
-margin_top = -172.0
-margin_right = 296.0
-margin_bottom = -152.0
+pause_mode = 2
+margin_left = 147.0
+margin_top = -171.0
+margin_right = 236.0
+margin_bottom = -151.0
 rect_scale = Vector2( 2, 2 )
+text = "Level Select"
 
 [node name="Pause" type="Button" parent="."]
 pause_mode = 2
-margin_left = 243.0
-margin_top = -172.0
-margin_right = 255.0
-margin_bottom = -152.0
+margin_left = 33.0
+margin_top = -171.0
+margin_right = 83.0
+margin_bottom = -151.0
 rect_scale = Vector2( 2, 2 )
+text = "Pause"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Level Select" to="." method="_on_Level_Select_pressed"]

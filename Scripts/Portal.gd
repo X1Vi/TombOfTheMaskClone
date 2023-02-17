@@ -11,9 +11,9 @@ func _on_Area2D_body_entered(body):
 		pass
 	else:
 		if  GlobalScene.current_level_tracking  == GlobalScene.last_level - 1 and body.name == "Player":
-			pass
+			GlobalScene.save_to_file()
 		else:
-			GlobalScene.levels[GlobalScene.current_level_tracking + 1].levelUnlocked == true
+			GlobalScene.save_to_file()
 			GlobalScene.current_level_tracking = GlobalScene.current_level_tracking + 1
 			var t_next_scene = GlobalScene.levels[GlobalScene.current_level_tracking].levelScene
 			get_tree().change_scene(t_next_scene)
