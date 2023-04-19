@@ -16,6 +16,7 @@ func _on_Area2D_body_entered(body):
 			GlobalScene.save_to_file()
 			GlobalScene.current_level_tracking = GlobalScene.current_level_tracking + 1
 			var t_next_scene = GlobalScene.levels[GlobalScene.current_level_tracking].levelScene
+			GlobalScene.lives = 3
 			get_tree().change_scene(t_next_scene)
 		
 		

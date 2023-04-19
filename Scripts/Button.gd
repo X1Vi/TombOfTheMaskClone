@@ -21,6 +21,7 @@ func _on_Button_pressed():
 				var t_scene = GlobalScene.levels[loadThisLevel].levelScene
 				get_tree().change_scene(t_scene)
 				GlobalScene.current_level_tracking = loadThisLevel
+				GlobalScene.lives = 3
 			elif GlobalScene.levels[loadThisLevel].levelUnlocked == false:
 				pass
 	

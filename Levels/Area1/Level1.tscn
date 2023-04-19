@@ -36,7 +36,7 @@ margin_bottom = 272.0
 text = "Spikes get activated when you collide with them and then take your life once activated after 3 seconds"
 
 [node name="Batenemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 486, 51 )
+position = Vector2( 531, 60 )
 velocity_vector = Vector2( 0, -30 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]

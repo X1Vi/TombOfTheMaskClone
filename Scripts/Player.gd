@@ -18,13 +18,13 @@ func _is_player():
 	pass
 
 func _ready():
-	pass
+	print(GlobalScene.levels)
+	animation_player.play("atStartColor")
 
 func _physics_process(delta):
-	
 	handle_animations()
 	_restart_level()
-	lives_indicator.text = str("Lives :" + str(GlobalScene.lives))
+	lives_indicator.text = str("Lives :" + str(GlobalScene.lives) + " " + str(Engine.get_frames_per_second()))
 	move_and_slide(MAX_SPEED * direction)
 	
 	
@@ -79,6 +79,9 @@ func _restart_level():
 		get_tree().reload_current_scene()
 		
 func handle_animations():
+	if GlobalScene.isCollidingWithBatEnemy == true:
+		animation_player.play("getHit")
+	
 	if direction.x < 0:
 		playerSprite.flip_h = true
 	if direction.x > 0:
@@ -99,5 +102,7 @@ func _on_Pause_pressed():
 	var t_pause_state = not get_tree().paused
 	get_tree().paused = t_pause_state
 
+func get_player_hit_anim_bool(player_hit_anim_bool):
+	print(player_hit_anim_bool)
 
 

@@ -1,5 +1,8 @@
 extends Node2D
 
+var isCollidingWithBatEnemy : bool = false
+
+
 var path = "res://Saves/levels_save.json"
 
 var lives = 3
@@ -15,11 +18,11 @@ var levels = [
 
 var last_level : int = levels.size()
 
-onready var level_selection = [
-	"res://Levels/Area1/Level2.tscn",
-	"res://Levels/Area1/Level4.tscn",
-	"res://Levels/Area1/Level3.tscn"
-]
+#onready var level_selection = [
+#	"res://Levels/Area1/Level2.tscn",
+#	"res://Levels/Area1/Level4.tscn",
+#	"res://Levels/Area1/Level3.tscn"
+#]
 
 func _ready():
 	load_from_file()
@@ -40,7 +43,8 @@ func load_from_file():
 		var json_string = file.get_as_text()
 		levels = parse_json(json_string)
 		file.close()
-		
+
+# this func is not working use directory to delete maybe
 func clear_file():
 	var file = File.new()
 	if file.file_exists(path):
@@ -48,3 +52,8 @@ func clear_file():
 		print("File deleted.")
 	else:
 		print("File does not exist.")
+		
+		
+
+func get_player_hit_anim_bool(player_hit_anim_bool):
+	isCollidingWithBatEnemy = player_hit_anim_bool
